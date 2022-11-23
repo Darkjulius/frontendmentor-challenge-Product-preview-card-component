@@ -1,0 +1,156 @@
+*,
+::after,
+::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: hsl(32, 37%, 92%);
+    font-family: 'Montserrat', sans-serif;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    max-width: 90rem;
+    padding: 1.25rem;
+}
+
+blockquote {
+    background-color: hsl(0, 0%, 100%);
+    border-bottom-left-radius: .625rem;
+    border-bottom-right-radius: .625rem;
+    padding: 1.25rem;
+}
+
+blockquote span {
+    color: hsl(228, 12%, 48%);
+    letter-spacing: .25em;
+    text-transform: uppercase;
+}
+
+blockquote h1 {
+    font-family: 'Fraunces', serif;
+    font-size: 1.875rem;
+    font-weight: 700;
+    margin: .625rem 0;
+}
+
+figure {
+    /*Removed the space between the "bottom" <figure> element and the "top" <blockquote> element.*/
+    display: flex;
+}
+
+.img-product-mobile {
+    border-top-left-radius: .625rem;
+    border-top-right-radius: .625rem;
+    height: auto;
+    width: 100%;
+}
+
+.img-desktop {
+    display: none;
+}
+
+.main-text {
+    color: hsl(228, 12%, 48%);
+    font-size: .875rem;
+    line-height: 1.5em;
+    margin-bottom: .9375rem;
+}
+
+.price {
+    display: flex;
+    margin-bottom: 0.9375rem;
+}
+
+.first-price {
+    color: hsl(158, 36%, 37%);
+    display: block;
+    font-family: 'Fraunces', serif;
+    font-size: 1.875rem;
+    letter-spacing: 0;
+    padding-right: .9375rem;
+}
+
+.second-price {
+    display: block;
+    letter-spacing: 0;
+    text-decoration: line-through;
+    align-self: center;
+}
+
+.btn {
+    background-color: hsl(158, 36%, 37%);
+    border-radius: .625rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3rem;
+}
+
+.btn img {
+    height: .9375rem;
+    padding-right: .625rem;
+}
+
+.btn-link {
+    color: hsl(0, 0%, 100%);
+    text-decoration: none;
+}
+
+.attribution { 
+    font-size: 11px;
+    text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+/************** MEDIA QUERIES *************/
+@media screen and (min-width: 41.6875rem) {
+
+    article {
+        align-items: center;
+        flex-direction: row;
+        height: 28.125rem;
+        margin: 0 auto;
+        max-height: 28.125rem;
+        max-width: 37.5rem;
+        width: 37.5rem;
+    }
+
+    blockquote {
+        border-top-right-radius: .625rem;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: .625rem;
+        display: flex;
+        flex-direction: column;
+        height: 28.125rem;
+        justify-content: center;
+    }
+
+    .img-desktop {
+        display: contents;
+    }
+
+    .img-mobile {
+        display: none;
+    }
+
+    .img-product-desktop {
+        border-top-left-radius: .625rem;
+        border-bottom-left-radius: .625rem;
+        height: 28.125rem;
+    }
+
+    .btn:hover {
+        background-color: #1a4032;
+    }
+    
+}
